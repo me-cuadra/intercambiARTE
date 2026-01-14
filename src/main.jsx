@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createConfig, WagmiProvider, http } from 'wagmi'
 import { aeneid } from '@story-protocol/core-sdk'
 import { injected } from 'wagmi/connectors'
-import App from './App.jsx'
+import App from './App.tsx'
 import './index.css'
 import { Toaster } from 'react-hot-toast'
 import { WalletProvider } from './contexts/WalletContext'
@@ -34,3 +34,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </WagmiProvider>
   </React.StrictMode>,
 )
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
